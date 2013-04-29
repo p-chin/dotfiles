@@ -1,0 +1,13 @@
+[core]
+        excludesfile = "~/.gitignore_global"
+[user]
+    name = p-chin
+    email = pchin.taka.1127@gmail.com
+[color]
+    ui = auto
+[alias]
+        st = status
+        co = checkout
+        ci = commit
+        br = branch
+        graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
