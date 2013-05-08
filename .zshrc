@@ -1,7 +1,8 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-export PATH=/opt/local/bin:/opt/local/sbin:.:$PATH
+export PATH=$HOME/bin:/opt/local/bin:/opt/local/sbin:$PATH
+export EDITOR=vim
 
 ZSH_THEME="robbyrussell"
 
@@ -19,5 +20,7 @@ PATH=~/.plenv/shims:$PATH
 eval "$(rbenv init -)"
 #PATH=~/.rbenv/shims:$PATH
 
-
+#######
+#alias#
+#######
 

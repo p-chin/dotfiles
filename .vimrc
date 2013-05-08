@@ -32,13 +32,12 @@ if &t_Co > 1
 syntax enable
 endif
 
-" perl
-au! BufRead,BufNewFile *.psgi set filetype=perl
-au! BufRead,BufNewFile *.t set filetype=perl
+"シンタックスハイライト 拡張子に応じてPerlやHtmlを識別する
+autocmd BufNewFile,BufRead *.psgi   set filetype=perl fenc=utf-8
+autocmd BufNewFile,BufRead *.t      set filetype=perl fenc=utf-8
+autocmd BufNewFile,BufRead *.mt     set filetype=html fenc=utf-8
+autocmd BufNewFile,BufRead *.tx     set filetype=html fenc=utf-8
 
-" 行末スペース
-highlight WhitespaceEOL ctermbg=red guibg=red
-au BufRead,BufNew,WinEnter * match WhitespaceEOL /\s\+$/
 
 " csファイルの文字コード自動変換
 autocmd BufNewFile,BufRead *.cs set fenc=utf-8 bomb
@@ -72,3 +71,13 @@ filetype plugin indent on  " required!
 filetype indent on
 syntax on
 
+" 行末スペース
+highlight WhitespaceEOL ctermbg=red guibg=red
+au BufRead,BufNew,WinEnter * match WhitespaceEOL /\s\+$/
+
+"-----------------------
+" 文字コードとかの設定
+"------------------------
+set termencoding=utf-8
+set encoding=utf-8
+set fileencoding=utf-8
