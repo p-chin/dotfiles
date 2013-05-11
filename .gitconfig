@@ -1,10 +1,12 @@
 [core]
         excludesfile = "~/.gitignore_global"
+[push]
+        default = tracking
 [user]
-    name = p-chin
-    email = pchin.taka.1127@gmail.com
+        name = p-chin
+        email = pchin.taka.1127@gmail.com
 [color]
-    ui = auto
+        ui = auto
 [alias]
         st = status
         co = checkout
