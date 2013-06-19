@@ -10,5 +10,5 @@ done
 
 if [ ! -d ~/.vim ]
 then
-    ln -s ~/.dotfiles/vimfiles ~/.vim
+    ln -s ~/dotfiles/vimfiles ~/.vim
 fi
