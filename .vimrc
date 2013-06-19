@@ -33,10 +33,13 @@ syntax enable
 endif
 
 "シンタックスハイライト 拡張子に応じてPerlやHtmlを識別する
+autocmd BufNewFile,BufRead *.pl     set filetype=perl fenc=utf-8
+autocmd BufNewFile,BufRead *.pm     set filetype=perl fenc=utf-8
 autocmd BufNewFile,BufRead *.psgi   set filetype=perl fenc=utf-8
 autocmd BufNewFile,BufRead *.t      set filetype=perl fenc=utf-8
 autocmd BufNewFile,BufRead *.mt     set filetype=html fenc=utf-8
 autocmd BufNewFile,BufRead *.tx     set filetype=html fenc=utf-8
+
 
 
 " csファイルの文字コード自動変換
@@ -81,3 +84,9 @@ au BufRead,BufNew,WinEnter * match WhitespaceEOL /\s\+$/
 set termencoding=utf-8
 set encoding=utf-8
 set fileencoding=utf-8
+
+" yankでclipbordにコピーするやつ
+set clipboard=unnamed,autoselect
+
+" insertモード向けると自動でset nopasteしてくれる
+autocmd InsertLeave * set nopaste
