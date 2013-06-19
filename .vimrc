@@ -41,6 +41,9 @@ autocmd BufNewFile,BufRead *.mt     set filetype=html fenc=utf-8
 autocmd BufNewFile,BufRead *.tx     set filetype=html fenc=utf-8
 
 
+"gf
+map gf <C-w>gf
+autocmd FileType perl set isfname-=- isfname-=/ isfname-=+
 
 " csファイルの文字コード自動変換
 autocmd BufNewFile,BufRead *.cs set fenc=utf-8 bomb
@@ -68,6 +71,11 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'vim-perl/vim-perl'
+NeoBundle 'vim-jp/vimdoc-ja'
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'thinca/vim-localrc'
 ""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 
 filetype plugin indent on  " required!
