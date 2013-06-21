@@ -7,7 +7,7 @@ set expandtab
 " key mapping
 imap <c-j> <esc>
 inoremap <C-h> =>
-inoremap <C-l> =>
+inoremap <C-l> ->
 
 " " setting for cursor
 nnoremap j gj
