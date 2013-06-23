@@ -4,10 +4,17 @@ set shiftwidth=4
 set softtabstop=0
 set expandtab
 
-" key mapping
+"/////////////
+" key mappings
+"/////////////
 imap <c-j> <esc>
 inoremap <C-h> =>
 inoremap <C-l> ->
+" syntax check
+autocmd FileType perl :map <C-n> <ESC>:!perl -cw %<CR>
+autocmd FileType perl :map <C-e> <ESC>:!perl %<CR>
+autocmd FileType ruby :map <C-n> <ESC>:!ruby -cW %<CR>
+autocmd FileType ruby :map <C-e> <ESC>:!ruby %<CR>
 
 " " setting for cursor
 nnoremap j gj
@@ -85,7 +92,36 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-localrc'
 ""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 
-let g:acp_enableAtStartup = 0 " Disable AutoComplPop
+" ////////////////////////
+" for neocomplcache config
+" ////////////////////////
+" Disable AutoComplPop
+let g:acp_enableAtStartup = 0
+" Enable NeoComplCache
+let g:NeoComplCache_EnableAtStartup = 1
+" use smartcase.
+let g:neocomplcache_enable_smart_case = 1
+" Use camel case completion.
+let g:neocomplcache_enable_camel_case_completion = 0
+" Use underbar completion.
+let g:neocomplcache_enable_underbar_completion = 1
+" Set minimum syntax keyword length.
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+
+" Define dictionary.
+"let g:neocomplcache_dictionary_filetype_lists = {
+"    \ 'default' : '',
+"    \ 'vimshell' : $HOME.'/.vimshell_hist',
+"    \ 'scheme' : $HOME.'/.gosh_completions'
+"        \ }
+
+" Define keyword.
+"if !exists('g:neocomplcache_keyword_patterns')
+"    let g:neocomplcache_keyword_patterns = {}
+"endif
+"let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+
 
 filetype plugin indent on  " required!
 filetype indent on

@@ -18,6 +18,11 @@ function alc() {
   fi
 }
 
+function unity() {
+ open 
+
+}
+
 #function erotube(){
 #    ruby /Users/pchin/erotube/erotube.rb
 #    open -a "/Applications/Google Chrome.app" /Users/pchin/erotube/erotube.html
