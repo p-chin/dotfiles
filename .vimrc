@@ -4,6 +4,8 @@ set shiftwidth=4
 set softtabstop=0
 set expandtab
 
+set laststatus=2
+
 "/////////////
 " key mappings
 "/////////////
@@ -25,7 +27,7 @@ set number
 
 " " encoding
 set encoding=utf-8
-set fileencodings=ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis,cp932
+set fileencodings=utf-8,ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis,cp932
 autocmd FileType gitcommit setl fileencoding=utf8
 
 " " 256 colors
@@ -82,14 +84,15 @@ NeoBundle 'VimClojure'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neosnippet'
+"NeoBundle 'Shougo/neosnippet'
 NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'vim-perl/vim-perl'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'thinca/vim-ref'
-NeoBundle 'thinca/vim-quickrun'
+"NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-localrc'
+NeoBundle 'thinca/vim-quickrun.git'
 ""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 
 " ////////////////////////

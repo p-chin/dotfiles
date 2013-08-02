@@ -1,3 +1,4 @@
+echo zshrc called
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 plugins=(git)
@@ -9,6 +10,8 @@ source $ZSH/oh-my-zsh.sh
 #alias#
 #######
 
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+
 #w3m4alc
 function alc() {
   if [ $# != 0 ]; then
@@ -18,9 +21,8 @@ function alc() {
   fi
 }
 
-function unity() {
- open 
-
+function uni2 {
+ /Applications/Unityy/Unity.app -projectPath $1
 }
 
 #function erotube(){
